@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZABCC_TAXI_BOOKING_39DEF'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZABCC_TAXI_BOOKING_39DEF'
+  }
+}
+define service ZABCUI_TAXI_BOOKING_39_O4DEF provider contracts odata_v4_ui {
+  expose ZABCC_TAXI_BOOKING_39DEF;
+}

@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZABCTAXI_BOOKING_39DEF",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZABCTAXI_BOOKING_39DEF",
+  "sapObjectType": "ZABCTAXI_BOOKING_39DEF",
+  "rootNode": true
+}

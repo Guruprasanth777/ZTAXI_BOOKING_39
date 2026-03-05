@@ -1,0 +1,54 @@
+managed implementation in class ZABCBP_R_TAXI_BOOKING_39DEF unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZABCR_TAXI_BOOKING_39DEF alias ZabcrTaxiBooking39def
+persistent table ZTAXI_BOOKING_39
+extensible
+draft table ZABCTXI_BKN_DDEF
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   BookingUUID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   BookingUUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTAXI_BOOKING_39 corresponding extensible
+  {
+    BookingUUID = BOOKING_UUID;
+    CustomerName = CUSTOMER_NAME;
+    PickupLocation = PICKUP_LOCATION;
+    DropLocation = DROP_LOCATION;
+    DriverID = DRIVER_ID;
+    VehicleNumber = VEHICLE_NUMBER;
+    Status = STATUS;
+    BookingDate = BOOKING_DATE;
+    CukyField = CUKY_FIELD;
+    FareAmount = FARE_AMOUNT;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

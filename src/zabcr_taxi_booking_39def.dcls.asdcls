@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZABCR_TAXI_BOOKING_39DEF'
+@MappingRole: true
+define role ZABCR_TAXI_BOOKING_39DEF {
+  grant select on ZABCR_TAXI_BOOKING_39DEF
+  where TRUE;
+}

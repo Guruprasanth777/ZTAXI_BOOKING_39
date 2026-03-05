@@ -1,0 +1,20 @@
+projection implementation in class ZABCBP_C_TAXI_BOOKING_39DEF unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZABCC_TAXI_BOOKING_39DEF alias ZabccTaxiBooking39def
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+}
